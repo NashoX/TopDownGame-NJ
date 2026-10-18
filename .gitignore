@@ -1,0 +1,23 @@
+# Carpetas temporales y caché pesada de Unity (NUNCA SUBIR A GITHUB)
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Bb]uild/
+/[Bb]uilds/
+/[Ll]ogs/
+/[Uu]ser[Ss]ettings/
+
+# Archivos de solución e IDEs (Visual Studio / Rider)
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.user
+*.userprefs
+*.pidb
+*.booproj
+
+# Build ejecutable final
+*.apk
+*.aab
+*.exe
