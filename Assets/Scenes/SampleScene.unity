@@ -119,38 +119,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &143343205 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7314200926896127179, guid: 2110bb33f2e0c0a40a8b364ace4ba707, type: 3}
-  m_PrefabInstance: {fileID: 1343402390}
-  m_PrefabAsset: {fileID: 0}
---- !u!50 &143343208 stripped
-Rigidbody2D:
-  m_CorrespondingSourceObject: {fileID: -7398369326510818842, guid: 2110bb33f2e0c0a40a8b364ace4ba707, type: 3}
-  m_PrefabInstance: {fileID: 1343402390}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &143343210 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4023975025054154275, guid: 2110bb33f2e0c0a40a8b364ace4ba707, type: 3}
-  m_PrefabInstance: {fileID: 1343402390}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &143343211
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 143343205}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70f2c3d344388dd4aa711f2ffa0c6c7e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::NewMonoBehaviourScript
-  rb: {fileID: 143343208}
-  moveSpeed: 10
-  cam: {fileID: 442208649}
-  movement: {x: 0, y: 0}
-  mousePos: {x: 0, y: 0}
 --- !u!1 &442208646
 GameObject:
   m_ObjectHideFlags: 0
@@ -301,7 +269,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32510204615be2b4abb0b5907fb8ce6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CameraFollow
-  target: {fileID: 143343210}
+  target: {fileID: 0}
   smoothSpeed: 0.02
   offset: {x: 0, y: 0, z: -10}
 --- !u!1 &619394800
@@ -504,7 +472,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &1343402390
+--- !u!1001 &2141555985
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -512,17 +480,13 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: -7398369326510818842, guid: 2110bb33f2e0c0a40a8b364ace4ba707, type: 3}
-      propertyPath: m_Interpolate
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4023975025054154275, guid: 2110bb33f2e0c0a40a8b364ace4ba707, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.21241
+      value: -5.811596
       objectReference: {fileID: 0}
     - target: {fileID: 4023975025054154275, guid: 2110bb33f2e0c0a40a8b364ace4ba707, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.00135
+      value: -1.5556794
       objectReference: {fileID: 0}
     - target: {fileID: 4023975025054154275, guid: 2110bb33f2e0c0a40a8b364ace4ba707, type: 3}
       propertyPath: m_LocalPosition.z
@@ -560,19 +524,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 7314200926896127179, guid: 2110bb33f2e0c0a40a8b364ace4ba707, type: 3}
-      propertyPath: m_TagString
-      value: Player
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 0}
-    - {fileID: 6081116243545091367, guid: 2110bb33f2e0c0a40a8b364ace4ba707, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 7314200926896127179, guid: 2110bb33f2e0c0a40a8b364ace4ba707, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 143343211}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2110bb33f2e0c0a40a8b364ace4ba707, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
@@ -581,4 +536,4 @@ SceneRoots:
   - {fileID: 619394802}
   - {fileID: 442208650}
   - {fileID: 1233148742}
-  - {fileID: 1343402390}
+  - {fileID: 2141555985}
