@@ -161,6 +161,8 @@ MonoBehaviour:
   cam: {fileID: 0}
   movement: {x: 0, y: 0}
   mousePos: {x: 0, y: 0}
+  maxHealth: 200
+  Health: 0
 --- !u!212 &5628450980741997812
 SpriteRenderer:
   serializedVersion: 3
@@ -247,7 +249,7 @@ Rigidbody2D:
   m_Interpolate: 1
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &1880110305833788029
 BoxCollider2D:
   m_ObjectHideFlags: 0

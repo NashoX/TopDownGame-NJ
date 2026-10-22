@@ -170,5 +170,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f0905dc6f06fe94ca61fca7dcb7812e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Bullet
-  range: 10
-  initialPosition: {x: 0, y: 0}
+  knockbackForce: -50
+  range: 100
+  damage: 100
