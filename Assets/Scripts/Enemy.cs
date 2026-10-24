@@ -45,27 +45,27 @@ public class Enemy : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         // 1. filtro primero por etiqueta
-        if (collision.gameObject.CompareTag("Bullet"))
-        {
-            // 2. busco el componente (con G mayúscula)
-            Bullet bullet = collision.gameObject.GetComponent<Bullet>();
-
-            // 3. verifico que exista
-            if (bullet != null)
+            if (collision.gameObject.CompareTag("Bullet"))
             {
-                //calculo del knockback
-                Vector2 direccionEmpuje = (transform.position - collision.transform.position).normalized;
-                rb.AddForce(direccionEmpuje * bullet.knockbackForce, ForceMode2D.Impulse);
+                // 2. busco el componente (con G mayúscula)
+                Bullet bullet = collision.gameObject.GetComponent<Bullet>();
 
-                Health -= bullet.damage;
-                Destroy(collision.gameObject); // destruye la bala
+                // 3. verifico que exista
+                if (bullet != null && !bullet.EstaEnElSuelo)
+                {
+                    //calculo del knockback
+                    Vector2 direccionEmpuje = (transform.position - collision.transform.position).normalized;
+                    rb.AddForce(direccionEmpuje * bullet.knockbackForce, ForceMode2D.Impulse);
+
+                    Health -= bullet.damage;
+                    bullet.CaerAlSuelo();
             }
 
-            // 4. verifico si murió el enemigo
-            if (Health <= 0)
-            {
-                Destroy(gameObject);
-            }
+                // 4. verifico si murió el enemigo
+                if (Health <= 0)
+                {
+                    Destroy(gameObject);
+                }
         }
 
         if (collision.gameObject.CompareTag("Player"))

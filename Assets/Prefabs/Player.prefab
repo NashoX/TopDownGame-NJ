@@ -157,12 +157,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NewMonoBehaviourScript
   rb: {fileID: -7398369326510818842}
-  moveSpeed: 20
+  moveSpeed: 10
   cam: {fileID: 0}
   movement: {x: 0, y: 0}
   mousePos: {x: 0, y: 0}
   maxHealth: 200
   Health: 0
+  dashSpeed: 30
+  dashDuration: 0.15
+  dashCooldown: 1
 --- !u!212 &5628450980741997812
 SpriteRenderer:
   serializedVersion: 3
