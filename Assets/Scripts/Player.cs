@@ -1,12 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class Player : MonoBehaviour
 {
     public Rigidbody2D rb;
     public float moveSpeed = 5f;
-    public Camera cam;
     public Vector2 movement;
     public Vector2 mousePos;
 
@@ -28,9 +28,6 @@ public class Player : MonoBehaviour
 
         if (rb == null)
             rb = GetComponent<Rigidbody2D>();
-
-        if (cam == null)
-            cam = Camera.main;
     }
 
     void Update()
@@ -40,7 +37,7 @@ public class Player : MonoBehaviour
 
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
-        mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
+        mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
         // Detección de la tecla espaciadora para iniciar el dash
         if (Input.GetKeyDown(KeyCode.Space) && canDash)
@@ -61,11 +58,6 @@ public class Player : MonoBehaviour
             // Movimiento estándar del personaje
             rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
         }
-
-        // Rotación orientada hacia la posición del cursor en pantalla
-        Vector2 lookDir = mousePos - rb.position;
-        float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg - 90f;
-        rb.rotation = angle;
     }
 
     private IEnumerator PerformDash()
